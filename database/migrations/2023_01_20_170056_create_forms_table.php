@@ -12,14 +12,16 @@ return new class extends Migration
      * @return void
      */
     public function up()
+    //declaracion de las variables
     {
         Schema::create('forms', function (Blueprint $table) {
+            //estas son las tablas que van a aparecer en la base de datos
             $table->id();
             $table->string('nombre');
             $table->string('email');
             $table->string('edad');
-            $table->string('contraseña');
-            $table->string('contraseña_confirmation');
+            $table->string('contrasena');
+            $table->string('contrasena_confirmation');
             $table->timestamps();
         });
     }

@@ -2,18 +2,18 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ValidacionController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+    
 });
+//ruta
+Route::get('form', [ValidacionController::class,'index']);
+//get recibir en form
+// busca 'validacioncontroller y abre la clase 'index' e ingresa los datos ahi
+Route::post('guardar', [ValidacionController::class,'guardar']);
+//post enviar 
+//abre el controloador y guarda los datos en 'guardar'
+
