@@ -33,6 +33,7 @@ public function build()
 {
     //trae lo que vamos a mostrar
     return $this->subject('Mundos E!')
+    //cualquier accion despues del return no se cumplira
     ->view('mail.view');
     //busca una vista(views) que este dentro de email
 }

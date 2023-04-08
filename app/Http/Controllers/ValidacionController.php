@@ -54,10 +54,12 @@ class ValidacionController extends Controller
             ];
            
             Mail::to('leo.sosa.96@hotmail.com')->send(new \App\Mail\PruebaMailTrap($details));
-            //return es el mensaje que se muestra al final
+            //es el mensaje que se manda al final de la accion
+
             
 //desde aca 
         return response()->json(['success'=>'se registro correctamente el fomulario y se envio el email']);
+        //return va al final de todo, todo lo que va despues del return no se va a ejecutar
         //cuando ponemos enviar el formulario muestra un cartel
         //tambien se reinicia los campos
 
@@ -68,7 +70,7 @@ class ValidacionController extends Controller
 
 
     
-    }
+}
 
 
 
